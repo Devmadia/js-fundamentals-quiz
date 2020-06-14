@@ -1,3 +1,9 @@
+var startQuizBtn = document.querySelector("#start-quiz");
+//console.log(startQuizBtn);
+
+startQuizBtn.addEventListener("click", function() {
+    alert("button clicked");
+  });
 // variable for high scores to be stored to
 // variable for timer
 // variable for questions
