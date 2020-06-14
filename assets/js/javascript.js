@@ -1,11 +1,14 @@
 var startQuizBtn = document.querySelector("#start-quiz");
-//console.log(startQuizBtn);
+//var timerEl = document.getElementById("timer");
 
-startQuizBtn.addEventListener("click", function() {
-    alert("button clicked");
-  });
+
+
+
+
 // variable for high scores to be stored to
 // variable for timer
+
+
 // variable for questions
 // function to call high scores
 // function for user initials for high score association and localStorage
@@ -14,8 +17,15 @@ startQuizBtn.addEventListener("click", function() {
 // function to clear high scores
 
 // function for timer countdown
+var seconds = document.getElementById("countdown").textContent;
+var countdown = setInterval(function() {
+    seconds--;
+    document.getElementById("countdown").textContent = seconds;
+    if (seconds <= 0) clearInterval(countdown);
+}, 1000);
 
 // function to startQuiz
+startQuizBtn.addEventListener("click", startQuiz);
 
 // array of questions
 var questions = [
