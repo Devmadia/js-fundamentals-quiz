@@ -1,13 +1,8 @@
 var startQuizBtn = document.querySelector("#start-quiz");
 //var timerEl = document.getElementById("timer");
 
-
-
-
-
 // variable for high scores to be stored to
 // variable for timer
-
 
 // variable for questions
 // function to call high scores
@@ -22,7 +17,9 @@ function startTimer() {
     var countdown = setInterval(function() {
         seconds--;  // seconds decrement
         document.getElementById("countdown").textContent = seconds;
-        if (seconds <= 0) clearInterval(countdown);
+        if (seconds <= 0) {
+            clearInterval(countdown);
+        }
         // after clearInterval, game must end
     }, 
         1000);
@@ -32,9 +29,9 @@ function startTimer() {
 startQuizBtn.addEventListener("click", startQuiz); 
 function startQuiz() {
     startTimer();
+
+    // start question cycle
 }
-
-
 
 // array of questions
 var questions = [
@@ -83,7 +80,6 @@ var questions = [
         answer: 4
     },
 ]
-
 
 // function to score user for correct answers
 
