@@ -1,4 +1,4 @@
-var startQuizBtn = document.querySelector("#start-quiz");
+var startQuizBtn = document.getElementById("start-btn");
 //var timerEl = document.getElementById("timer");
 
 // variable for high scores to be stored to
@@ -15,7 +15,7 @@ var startQuizBtn = document.querySelector("#start-quiz");
 function startTimer() {
     var seconds = document.getElementById("countdown").textContent;
     var countdown = setInterval(function() {
-        seconds--;  // seconds decrement
+        seconds--;  // seconds decrement after countdown begins
         document.getElementById("countdown").textContent = seconds;
         if (seconds <= 0) {
             clearInterval(countdown);
@@ -25,9 +25,14 @@ function startTimer() {
         1000);
 }
 
+// penalty code
+//timeRemaining = timeRemaining - 10;
+//timeEl.textContent = timeRemaining;
+
 // function to startQuiz
 startQuizBtn.addEventListener("click", startQuiz); 
 function startQuiz() {
+    console.log('Started')
     startTimer();
 
     // start question cycle

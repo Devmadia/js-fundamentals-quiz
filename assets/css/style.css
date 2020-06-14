@@ -17,7 +17,7 @@ h2 {
 
 h3 {
   font-size: 25px;
-  display: blockf;
+  display: block;
 }
 
 /*body {
@@ -37,6 +37,13 @@ h3 {
 li {
 
 }*/
+header {
+  font-size: 20px;
+  /*color: #a8126f;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .container {
     padding: 0;
@@ -48,14 +55,6 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-header {
-  font-size: 20px;
-  /*color: #a8126f;*/
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 /* styling for quiz text will go here */
@@ -81,8 +80,8 @@ header {
 
 .btn {
     background-color: #39047d;
-    border-radius: 0px;
-    padding: 5px 10px;
+    border-radius: 10px;
+    padding: 15px 30px;
     color: #FFFFFF;
     outline: none;
 }
