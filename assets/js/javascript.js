@@ -18,11 +18,15 @@ var startQuizBtn = document.querySelector("#start-quiz");
 
 // function for timer countdown
 var seconds = document.getElementById("countdown").textContent;
-var countdown = setInterval(function() {
+// () {
+    var countdown = setInterval(function() {
     seconds--;
     document.getElementById("countdown").textContent = seconds;
     if (seconds <= 0) clearInterval(countdown);
-}, 1000);
+    }, 
+        1000);
+//}
+
 
 // function to startQuiz
 startQuizBtn.addEventListener("click", startQuiz);
