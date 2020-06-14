@@ -1,0 +1,59 @@
+a {
+    text-decoration: none;
+}
+
+
+
+h2 {
+ font-size: 35px;
+ font-weight: bolder;
+ display: block;
+}
+
+h3 {
+    display: blockf;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*ul {
+
+}
+
+li {
+
+}*/
+
+header {
+    font-size: 20px;
+    color: #a8126f;
+    display: flex;
+}
+
+
+
+/* styling for quiz text will go here */
+/*.start-quiz {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}*/
+
+/* start-quiz button styling will go here */
+/*.btn:before {
+    background-color: #39047d;
+    transition: background-color 1s linear;
+}*/
+
+/*.btn:hover {
+    background-color: # ;
+}*/
+
+/* styling for hidden class divs */
+/*div-quiz {
+    visibility: hidden;
+}*/
+
+/* media queries will go here */
