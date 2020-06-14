@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -13,9 +20,15 @@ h3 {
   display: blockf;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+/*body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}*/
 
 /*ul {
 
@@ -25,38 +38,64 @@ li {
 
 }*/
 
+.container {
+    padding: 0;
+    margin: 0;
+    width: 800px;
+    max-width: 80%;
+    border-radius: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header {
   font-size: 20px;
   /*color: #a8126f;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 15px;
 }
 
 /* styling for quiz text will go here */
 #quiz-form {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 32px 0 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 32px 0 32px;
 }
 
 .qzbtn {
-    padding: 15px 30px 15px 30px;
-    min-width: auto;
-    min-height: auto;
+  padding: 15px 30px 15px 30px;
+  min-width: auto;
+  min-height: auto;
 }
 
-/* start-quiz button styling will go here */
-/*.btn:before {
-    background-color: #39047d;
-    transition: background-color 1s linear;
-}*/
+.btn-choice {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
 
-/*.btn:hover {
-    background-color: # ;
-}*/
+.btn {
+    background-color: #39047d;
+    border-radius: 0px;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    outline: none;
+}
+
+/* button styling will go here */
+.btn:before {
+    /*background-color: #39047d;*/
+    transition: background-color 1s linear;
+}
+
+.btn:hover {
+    background-color: #e20fb5;
+}
 
 /* styling for hidden class divs */
 /*div-quiz {
