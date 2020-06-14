@@ -28,8 +28,11 @@ li {
 
 header {
     font-size: 20px;
-    color: #a8126f;
+    /*color: #a8126f;*/
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 
