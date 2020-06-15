@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -16,7 +14,8 @@ h2 {
 }
 
 h3 {
-  font-size: 25px;
+  margin: 0;
+  font-size: 20px;
   display: block;
 }
 
@@ -37,6 +36,7 @@ h3 {
 li {
 
 }*/
+
 header {
   font-size: 20px;
   /*color: #a8126f;*/
@@ -45,16 +45,13 @@ header {
   justify-content: space-between;
 }
 
-.container {
-    padding: 0;
-    margin: 0;
-    width: 800px;
-    max-width: 80%;
-    border-radius: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* container styling for quiz element */
+.container { 
+  border-radius: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* styling for quiz text will go here */
@@ -72,28 +69,28 @@ header {
 }
 
 .btn-choice {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .btn {
-    background-color: #39047d;
-    border-radius: 10px;
-    padding: 15px 30px;
-    color: #FFFFFF;
-    outline: none;
+  background-color: #39047d;
+  border-radius: 10px;
+  padding: 15px 30px;
+  color: #ffffff;
+  outline: none;
 }
 
 /* button styling will go here */
 .btn:before {
-    /*background-color: #39047d;*/
-    transition: background-color 1s linear;
+  /*background-color: #39047d;*/
+  transition: background-color 1s linear;
 }
 
 .btn:hover {
-    background-color: #e20fb5;
+  background-color: #e20fb5;
 }
 
 /* styling for hidden class divs */
