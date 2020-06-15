@@ -66,12 +66,19 @@ var questionIndex = [
 startQuizBtn.addEventListener("click", startQuiz); 
 //hsFormEl.addEventListener("click", highScores)
 
-function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
+// to activate quiz start and reveal buttons
+function letsPlay() {
+    startQuiz;
+    Incognito;
+}
+
+// to hide buttons for quiz from initial page before player starts quiz
+function Incognito() {
+    var x = document.getElementById("answer-buttons");
+    if (x.style.visibility === "hidden") {
+      x.style.visibility = "block";
     } else {
-      x.style.display = "none";
+      x.style.visibility = "visible";
     }
   }
 
@@ -94,7 +101,7 @@ function startQuiz() {
     //startQuizBtn.classList.add('hide')
     startTimer(); // calls for the timer to start when Quiz starts
     showQns(0); // starts with first question in questionIndex
-    startNextQ(0);
+    //startNextQ(0);
 
     // start question cycle
 }
@@ -113,6 +120,7 @@ function startQuiz() {
 //timeRemaining = timeRemaining - 10;
 //timeEl.textContent = timeRemaining;
 
+// display the question and answer options
 function showQns(questionBank) {
     var q = questionIndex[questionBank];
     qElement.textContent = (questionBank + 1) + ". " + q.question;
@@ -120,6 +128,7 @@ function showQns(questionBank) {
     choice2.textContent = q.choice2;
     choice3.textContent = q.choice3;
     choice4.textContent = q.choice4;
+
 }
 
 //function startNextQ (currentQuestionIndex) {
