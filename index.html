@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <div><!-- View Highscores on left side -->
+        <div id="gamescores">
+            <!-- View Highscores on left side -->
             <h3 class="" id="">View High Scores</h3>
             <!-- Timer on right side, countdown with penalty included for wrong answers subtracting more time -->
         </div>    
@@ -18,17 +19,25 @@
     <main>
         <div class="container">
             <div id="question-container" class="hide">
-                <div id="question">Question</div>
+                <div id="question">
+                    <h2>Coding Quiz Challenge</h2>
+                    <p>
+                        Try to answer the following code-related questions within the time limit.
+                    </br>
+                        Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+                    </p>
+                    <button id="start-btn" class="btn" onclick="startTimer">Start Quiz</button>
+                </div>
                 <div id="answer-buttons" class="btn-choice">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
+                    <button id="btn1" class="btn">Answer 1</button>
+                    <button id="btn2" class="btn">Answer 2</button>
+                    <button id="btn3" class="btn">Answer 3</button>
+                    <button id="btn4" class="btn">Answer 4</button>
                 </div>
             </div>
             <div class="controls">
-                <button id="start-btn" class="start-btn btn">Start</button>
-                <button id="next-btn" class="next-btn btn hide">Next</button>
+                <!-- <button id="start-btn" class="start-btn btn">Start</button>-->
+                <!--<button id="next-btn" class="next-btn btn hide">Next</button>-->
             </div>
         </div>
         
@@ -40,6 +49,11 @@
             <!--Keep in mind that incorrect answers will penalize your score/time by ten seconds!-->
         <!--</p>-->
         <!--<button id="start-quiz" class="qzbtn" onclick="startTimer">Start Quiz</button> -->
+
+        <!-- High Scores input form -->
+        <!-- <div class="hs-form"> -->
+        <!--    <input type="" name="" class="text-input" placeholder="Enter your initials" /> -->
+        <!-- </div> -->
     <script src="./assets/js/javascript.js"></script>
     </main>
 </body>

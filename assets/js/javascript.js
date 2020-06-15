@@ -1,78 +1,21 @@
 var startQuizBtn = document.getElementById("start-btn");
-var questionContainerElement = document.getElementById('question-container');
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
+var questionContainerElement = document.getElementById("question-container");
+var qElement = document.getElementById("question");
 
-let randomQuestions, currentQuestionIndex 
-startQuizBtn.addEventListener("click", startQuiz); 
+var answerButtons = document.getElementById("answer-buttons");
 
-//var timerEl = document.getElementById("timer");
+//var hsFormEl = document.querySelector("#hs-form");
 
-// variable for high scores to be stored to
-// variable for timer
+var choice1 = document.getElementById("btn1");
+var choice2 = document.getElementById("btn2");
+var choice3 = document.getElementById("btn3");
+var choice4 = document.getElementById("btn4");
 
-// variable for questions
-// function to call high scores
-// function for user initials for high score association and localStorage
-// function for null answer with user initials before continuing
-// function to store high scores to localStorage
-// function to clear high scores
-
-// function for timer countdown
-function startTimer() {
-    var seconds = document.getElementById("countdown").textContent;
-    var countdown = setInterval(function() {
-        seconds--;  // seconds decrement after countdown begins
-        document.getElementById("countdown").textContent = seconds;
-        if (seconds <= 0) {
-            clearInterval(countdown);
-        }
-        // after clearInterval, game must end
-    }, 
-        1000);
-}
-
-// penalty code
-//timeRemaining = timeRemaining - 10;
-//timeEl.textContent = timeRemaining;
-
-// function to startQuiz
-
-function startQuiz() {
-    startQuizBtn.classList.add('hide')
-    startTimer();
-    randomQuestions = questions.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
-    questionContainerElement.classList.remove('hide');
-    startNextQ();
-
-    // start question cycle
-}
-
-function startNextQ () {
-    showQuestion(randomQuestions[currentQuestionIndex])
-}
-
-function showQuestion (question) {
-    questionElement.innerText = question.question
-    question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button);
-    })
-}
-
-function selectChoice () {
-
-}
+// variable for scoreboard
+var score = 0;
 
 // array of questions
-var questions = [
+var questionIndex = [
     { 
         question: "What are variables used for in JavaScript Programs?",
         choice1: "Storing numbers, dates, or other values",
@@ -119,16 +62,90 @@ var questions = [
     },
 ]
 
-// function to score user for correct answers
+// addEventListener to start quiz on button click
+startQuizBtn.addEventListener("click", startQuiz); 
+//hsFormEl.addEventListener("click", highScores)
 
-var score = 0;
-for (var i = 0; i < questions.length; i++) {
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
+// function for timer countdown
+function startTimer() {
+    var seconds = document.getElementById("countdown").textContent;
+    var countdown = setInterval(function() {
+        seconds--;  // seconds decrement after countdown begins
+        document.getElementById("countdown").textContent = seconds;
+        if (seconds <= 0) {
+            clearInterval(countdown);
+        }
+        // after clearInterval, game must end
+    }, 
+        1000);
 }
 
+// function to startQuiz
+function startQuiz() {
+    //startQuizBtn.classList.add('hide')
+    startTimer(); // calls for the timer to start when Quiz starts
+    showQns(0); // starts with first question in questionIndex
+    startNextQ(0);
+
+    // start question cycle
+}
+
+// variable for high scores to be stored to
+// variable for timer
+
+// variable for questions
+// function to call high scores
+// function for user initials for high score association and localStorage
+// function for null answer with user initials before continuing
+// function to store high scores to localStorage
+// function to clear high scores
+
+// penalty code
+//timeRemaining = timeRemaining - 10;
+//timeEl.textContent = timeRemaining;
+
+function showQns(questionBank) {
+    var q = questionIndex[questionBank];
+    qElement.textContent = (questionBank + 1) + ". " + q.question;
+    choice1.textContent = q.choice1;
+    choice2.textContent = q.choice2;
+    choice3.textContent = q.choice3;
+    choice4.textContent = q.choice4;
+}
+
+//function startNextQ (currentQuestionIndex) {
+    //showQuestion(randomQuestions[currentQuestionIndex])
+//}
+
+//function showQuestion (question) {
+//    qElement.innerText = question.question
+//    question.answers.forEach(answer => {
+  //      const button = document.createElement('button')
+    //    button.innerText = answer.text
+      //  button.classList.add('btn')
+        //if (answer.correct) {
+          //  button.dataset.correct = answer.correct
+        //}
+        //button.addEventListener('click', selectAnswer)
+        //answerButtonsElement.appendChild(button);
+    //})
+//}
+
+//function selectChoice () {
+
+//}
+
+// function to score user for correct answers
 // function to call questions
 // function to introduce next question
-
-
 // function to penalize timer by -10 seconds for incorrect answers
 
